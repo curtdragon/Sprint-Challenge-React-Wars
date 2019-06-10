@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 import StarWars from "./components/StarWars";
 
 class App extends Component {
@@ -7,12 +7,14 @@ class App extends Component {
     super();
     this.state = {
       starwarsChars: [],
-      // starwarChar: ""
+      nextPage:"",
+      previousPage:"",
+      currentPage:"https://swapi.co/api/people"
     };
   };
 
   componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people/');
+    this.getCharacters("https://swapi.co/api/people");
   }
 
   getCharacters = URL => {
@@ -24,7 +26,9 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        this.setState({starwarsChars: data.results});
+        this.setState({nextPage: data.next});
+        this.setState({previousPage: data.previous});
       })
       .catch(err => {
         throw new Error(err);

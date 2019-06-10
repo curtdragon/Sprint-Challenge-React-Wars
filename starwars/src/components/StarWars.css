@@ -1,0 +1,28 @@
+.char-list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.char {
+    background: saddlebrown;
+    border-radius: 5px;
+    color: white;
+    flex-flow: row wrap;
+    margin: 1rem;
+    padding: 1rem;
+    width: 43%;
+    text-align: left; 
+}
+h2 {
+    color: black;
+}
+li {
+    list-style: square inside url("../images/icon.png");
+    color: orange;
+    font-size: 10px;
+}
+.physical {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
