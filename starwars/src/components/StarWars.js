@@ -1,18 +1,28 @@
-import React from "react";
+import React, {Component} from "react";
 import Characters from "./Characters";
 import "./StarWars.css"
 
-const StarWars = props => {
-    return (
-        <div className="char-list">
-            {props.starwarsChars.map(index =>(
-                <Characters
-                    starwarsChar={index}
-                    key={index.name}
-                />
-            ))}
-        </div>
-    );
+class StarWars extends Component {
+
+    // constructor(props){
+    //     super(props);
+    //     this.state={
+
+    //     };
+    // };
+
+    render(){
+        return (
+            <div className="char-list">
+                {this.props.starwarsChars.map(index => (
+                    <Characters
+                        starwarsChar={index}
+                        key={index.name}
+                    />
+                ))}
+            </div>
+        );
+    };
 };
 
 export default StarWars;

@@ -5,26 +5,26 @@
 }
 
 .char {
-    /* background-image: url("../images/starwars.png"); */
-    background-color: yellow;
+    background-color: black;
     background-size: contain;
     border-radius: 5px;
-    color: black;
+    color: yellow;
     margin: 1%;
     padding: 1%;
     width: 29%;
     text-align: left; 
+    opacity: 0.7;
 }
 h2 {
     color: blue;
 }
 li {
-    list-style: square inside url("../images/icon.png");
-    color: black;
+    list-style: circle inside;
     font-size: 15px;
 }
 .physical {
     display: flex;
     flex-flow: row wrap;
+    flex-basis: 30%;
     justify-content: space-between;
 }

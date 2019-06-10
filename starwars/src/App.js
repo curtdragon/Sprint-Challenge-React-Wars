@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import "./App.css";
 import StarWars from "./components/StarWars";
 
@@ -9,7 +9,7 @@ class App extends Component {
       starwarsChars: [],
       nextPage:"",
       previousPage:"",
-      currentPage:"https://swapi.co/api/people"
+      currentPage:""
     };
   };
 
@@ -29,7 +29,6 @@ class App extends Component {
         this.setState({starwarsChars: data.results});
         this.setState({nextPage: data.next});
         this.setState({previousPage: data.previous});
-        console.log(data);
       })
       .catch(err => {
         throw new Error(err);

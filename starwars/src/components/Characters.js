@@ -17,7 +17,7 @@ const Characters =props => {
             <div>
                 <ul>
                     <p>Species</p>
-                    <li>{props.starwarsChar.species[0]}</li>
+                    <li>{props.starwarsChar.species}</li>
                 </ul>
                 <ul>
                     <p>Appeared in Films</p>
