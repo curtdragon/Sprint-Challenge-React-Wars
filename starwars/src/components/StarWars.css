@@ -1,25 +1,27 @@
 .char-list {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
 .char {
-    background: saddlebrown;
+    /* background-image: url("../images/starwars.png"); */
+    background-color: yellow;
+    background-size: contain;
     border-radius: 5px;
-    color: white;
-    flex-flow: row wrap;
-    margin: 1rem;
-    padding: 1rem;
-    width: 43%;
+    color: black;
+    margin: 1%;
+    padding: 1%;
+    width: 29%;
     text-align: left; 
 }
 h2 {
-    color: black;
+    color: blue;
 }
 li {
     list-style: square inside url("../images/icon.png");
-    color: orange;
-    font-size: 10px;
+    color: black;
+    font-size: 15px;
 }
 .physical {
     display: flex;
