@@ -13,13 +13,19 @@ class StarWars extends Component {
 
     render(){
         return (
-            <div className="char-list">
-                {this.props.starwarsChars.map(index => (
-                    <Characters
-                        starwarsChar={index}
-                        key={index.name}
-                    />
-                ))}
+            <div>
+                <div>
+                    <button type="button">Previous Page</button>
+                    <button type="button">Next Page</button>
+                </div>
+                <div className="char-list">   
+                    {this.props.starwarsChars.map(index => (
+                        <Characters
+                            starwarsChar={index}
+                            key={index.name}
+                        />
+                    ))}
+                </div>
             </div>
         );
     };
