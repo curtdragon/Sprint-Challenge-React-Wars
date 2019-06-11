@@ -17,6 +17,16 @@ class App extends Component {
     this.getCharacters("https://swapi.co/api/people");
   }
 
+  nPage = () => {    
+    this.getCharacters(this.state.nextPage);
+    console.log(this.state.nextPage)
+  }
+
+  pPage = () => {
+    this.getCharacters(this.state.previousPage);
+    console.log(this.state.previousPage)
+  }
+
   getCharacters = URL => {
     // feel free to research what this code is doing.
     // At a high level we are calling an API to fetch some starwars data from the open web.
@@ -26,9 +36,12 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({starwarsChars: data.results});
-        this.setState({nextPage: data.next});
-        this.setState({previousPage: data.previous});
+        this.setState(
+          {starwarsChars: data.results,
+            nextPage: data.next,
+            previousPage: data.previous},
+        );
+        
       })
       .catch(err => {
         throw new Error(err);
@@ -41,6 +54,8 @@ class App extends Component {
         <h1 className="Header">React Wars</h1>
         <StarWars
         starwarsChars={this.state.starwarsChars}
+        nPage={this.nPage}
+        pPage={this.pPage}
         />
       </div>
     );

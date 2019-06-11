@@ -4,16 +4,12 @@ import "./StarWars.css"
 
 class StarWars extends Component {
 
-    // nextPage(){
-
-    // }
-
     render(){
         return (
             <div>
                 <div>
-                    <button type="button">Previous Page</button>
-                    <button type="button">Next Page</button>
+                    <button type="button" onClick={this.props.pPage}>Previous Page</button>
+                    <button type="button" onClick={this.props.nPage}>Next Page</button>
                 </div>
                 <div className="char-list">   
                     {this.props.starwarsChars.map(index => (
