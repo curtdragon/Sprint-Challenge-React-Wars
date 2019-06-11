@@ -1,0 +1,39 @@
+button {
+    background-color: black;
+    border: 1px solid yellow;
+    color: yellow;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.char-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.char {
+    background-color: black;
+    background-size: contain;
+    border-radius: 5px;
+    color: yellow;
+    margin: 1%;
+    padding: 1%;
+    width: 29%;
+    text-align: left; 
+    opacity: 0.7;
+}
+h2 {
+    color: blue;
+}
+li {
+    list-style: circle inside;
+    font-size: 15px;
+}
+.physical {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 30%;
+    justify-content: space-between;
+}
