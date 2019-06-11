@@ -4,12 +4,9 @@ import "./StarWars.css"
 
 class StarWars extends Component {
 
-    // constructor(props){
-    //     super(props);
-    //     this.state={
+    // nextPage(){
 
-    //     };
-    // };
+    // }
 
     render(){
         return (

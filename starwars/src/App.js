@@ -35,10 +35,6 @@ class App extends Component {
       });
   };
 
-  // changePage() {
-
-  // }
-
   render() {
     return (
       <div className="App">
