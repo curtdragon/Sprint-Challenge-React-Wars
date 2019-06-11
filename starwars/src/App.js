@@ -19,12 +19,10 @@ class App extends Component {
 
   nPage = () => {    
     this.getCharacters(this.state.nextPage);
-    console.log(this.state.nextPage)
   }
 
   pPage = () => {
     this.getCharacters(this.state.previousPage);
-    console.log(this.state.previousPage)
   }
 
   getCharacters = URL => {
